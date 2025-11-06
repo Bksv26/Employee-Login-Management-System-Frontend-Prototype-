@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h2>Welcome to Page 2</h2>
+   <p id="employeeInfo"></p>
+    <script>
+       const uid = localStorage.getItem("currentemployee");
+    const userInfo = document.getElementById("employeeInfo");
+
+    if (uid) {
+        userInfo.innerText = "Logged in as: " + uid;
+    } else {
+        userInfo.innerText = "No employee logged in.";
+    }
+    </script>
+</body>
+</html>
